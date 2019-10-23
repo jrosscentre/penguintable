@@ -9,7 +9,7 @@ function(data)
         maketable(data);
         console.log("good", (data))
         
-        
+        getPicture(data);
     }
 
 
@@ -40,4 +40,16 @@ d3.select("#table")
 .enter()
 .append("tr")
 }
+
+var getPicture = function(data)
+{
+    d3.select("#table")
+    .selectAll("picture")
+    .data(data)
+    .enter()
+    .append("picture")
+    .attr(getPicture)
+    .append("tr")
+}
+
 
